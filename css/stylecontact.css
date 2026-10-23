@@ -127,6 +127,16 @@ select {
 }
 
 .dark-mode {
-    background-color: #222;
+    background-color: #384d56;
+    color:azure;
+}
+
+body.dark-mode .box {
+    background-color:  #5f7c8a;
+    color: white;
+}
+
+body.dark-mode .navbutton {
+    background-color:  #5f7c8a;
     color: white;
 }

@@ -9,10 +9,10 @@ if (menuButton && navMenu) {
 }
 
 
-const darkmodebutton = document.querySelector("#darkmodebutton");
-darkmodebutton.addEventListener("click", function (){
-    document.classlist.toggle("dark-mode");
+const darkModeButton = document.querySelector("#darkModeButton");
 
+darkModeButton.addEventListener("click", function () {
+    document.body.classList.toggle("dark-mode");
 });
 
 
