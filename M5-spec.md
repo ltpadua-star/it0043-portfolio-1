@@ -11,10 +11,20 @@ user clicks the button repeatedly
 links should not appear twice
 
 ## Pseudocode
-1. find menu button
-2. find navigation links
-3. wait for a click
-4. show or hide links
+START
+    DISPLAY menu_button
+
+    WHEN menu_button is clicked:
+
+        IF navigation menu is currently HIDDEN THEN
+            SHOW navigation menu
+
+        ELSE
+            HIDE navigation menu
+
+        END IF
+
+END
 
 # Dark mode
 
@@ -29,10 +39,22 @@ click again to turn it off
 keep texts readable
 
 ## Pseudocode
-1. find dark mode button
-2. wait for a click
-3. check if dark mode is on
-4. turn it on or off
+START
+    DISPLAY dark_mode_button
+
+    WHEN dark_mode_button is clicked:
+
+        IF page background is currently LIGHT THEN
+            CHANGE page background to DARK
+            CHANGE text color to LIGHT
+
+        ELSE
+            CHANGE page background to LIGHT
+            CHANGE text color to DARK
+
+        END IF
+
+END
 
 # Dynamic content
 
@@ -46,12 +68,19 @@ the array items shows on the page
 array is empty
 do not repeat the items
 
-## Pseudocode
-1. make an array
-2. find the content area
-3. read each item
-4. show each item
-5. show a message if there are no items
+
+START
+    DISPLAY project_section
+
+    FOR EACH project in the project list:
+        DISPLAY project title
+        DISPLAY project description
+        DISPLAY project image
+    END FOR
+
+    IF project list is empty THEN
+        DISPLAY "No projects available"
+    END IF
 
 # Contact Form
 
@@ -67,9 +96,25 @@ the email is wrong
 
 
 ## Pseudocode
-1. find contact form
-2. find the input fields
-3. wait for the form submission
-4. check the fields
-5. show error if something is wrong
-6. show success if everything is correct
+START
+    DISPLAY contact_form
+
+    WHEN contact_form is submitted:
+
+        CHECK name field
+        CHECK email field
+        CHECK message field
+
+        IF name field is empty THEN
+            DISPLAY "Please enter your name" beside the name field
+        END IF
+
+        IF email field is empty or incorrect THEN
+            DISPLAY "Please enter a valid email" beside the email field
+        END IF
+
+        IF message field is empty THEN
+            DISPLAY "Please " beside the message field
+        END IF
+
+END
