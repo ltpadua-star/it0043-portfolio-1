@@ -18,9 +18,15 @@ darkmodebutton.addEventListener("click", function (){
 
 const projects = [
     {
-        title: "My Projects",
+        title: "Design Projects",
         description: "Best works so far",
         image: "images/Screenshot 2026-10-20 230823.png"
+    },
+
+    {
+        title: "Character Design",
+        description: "Character Turnaround of a character",
+        image: "images/CA6_LIA PADUA.jpg"
     },
 ];
 

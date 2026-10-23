@@ -97,7 +97,7 @@ nav {
 
 .box {
   display: block;
-  width: 400px;
+  width: 600px;
   margin: 0 auto;
   padding: var(--space-sm);
   background-color: var(--color-surface);
@@ -107,8 +107,14 @@ nav {
 
 
 
-.project {
-    margin: 20px;
+.project img{
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height:auto;
+    object-fit: contain;
+
 }
 
 .dark-mode {
