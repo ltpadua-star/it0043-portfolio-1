@@ -131,3 +131,19 @@ body.dark-mode .navbutton {
     background-color:  #5f7c8a;
     color: white;
 }
+
+.settings {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    margin: 20px;
+}
+
+.darkmode-settings {
+    display: flex;
+    justify-content: flex-left-end;
+    align-items: center;
+    gap: 8px;
+    margin: 20px;
+}

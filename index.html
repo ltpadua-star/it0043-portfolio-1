@@ -5,17 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LIA'S HOMEPAGE</title>
     <link rel="stylesheet" href="css/style.css">
+ <script>
+    const savedSettings = localStorage.getItem("portfolioSettings");
 
+    try {
+      if (savedSettings) {
+        const settings = JSON.parse(savedSettings);
+        document.documentElement.dataset.theme = settings.theme;
+      }
+    } catch (error) {
+      document.documentElement.dataset.theme = "light";
+    }
+  </script>
+
+  <script src="js/script.js" defer></script>
 
 </head>
-<body>
-    
+<body class="dark-mode">
+
     <header>
         <h1>WELCOME TO MY PORTFOLIO</h1>
     </header>
-
+    <div class="darkmode-settings">
     <button id="darkModeButton">Dark Mode</button>
+    </div>
     
+    <div class="settings">
+    <input  type="text" id="visitorName" placeholder="Enter your name">
+    <button id="saveNameButton">Save Name</button>
+    <p id="welcomeMessage"></p>
+    <p id="lastVisitMessage"></p>
+    </div>
     <nav id="navMenu">
         <a href="index.html" class="navbutton">Home</a>
         <a href="skills.html" class="navbutton">Skills</a>
@@ -23,7 +43,10 @@
         <a href="contact.html" class="navbutton">Contact</a>
     </nav>
 
+    
+
     <main>
+        
         <section> 
         <div class="box">
             <h2>This is my Portfolio!</h2>
@@ -52,6 +75,6 @@
     <footer>
         <p style="text-align: center;">&copy; 2026 Lia Francine T. Padua. All rights reserved.</p>
     </footer>
-    <script src="js/script.js"></script>
+   <script src="js/storage.js"></script>
 </body>
 </html>

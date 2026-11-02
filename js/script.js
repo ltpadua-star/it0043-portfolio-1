@@ -73,3 +73,15 @@ if (contactForm) {
 const name = document.querySelector("#name");
 const email = document.querySelector("#email");
 const message = document.querySelector("#message");
+
+const today = new Date().toLocaleDateString();
+
+settings.lastVisit = today;
+saveSettings(settings);
+
+const lastVisitMessage = document.querySelector("#lastVisitMessage");
+
+if (settings.lastVisit) {
+  lastVisitMessage.textContent =
+    `Your last visit was on ${settings.lastVisit}.`;
+}
