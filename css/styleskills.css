@@ -153,3 +153,60 @@ body.dark-mode .navbutton {
     gap: 8px;
     margin: 20px;
 }
+
+@media (max-width: 480px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  main,
+  header,
+  footer {
+    width: calc(100% - 1.5rem);
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .box {
+    width: 100%;
+    padding: var(--space-md);
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbutton {
+    display: block;
+    width: 90%;
+    margin: 5px auto;
+  }
+
+  .settings,
+  .darkmode-settings {
+    flex-direction: column;
+    align-items: stretch;
+    margin: 15px 10px;
+  }
+
+  .settings input,
+  .settings button,
+  .darkmode-settings button {
+    width: 100%;
+    padding: 10px;
+  }
+
+  section img,
+  .project img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+  }
+
+  footer p {
+    font-size: 0.75rem;
+  }
+}
